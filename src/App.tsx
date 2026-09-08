@@ -302,7 +302,6 @@ export function App() {
         readings={readings}
         patientProfile={patientProfile}
         statistics={statistics}
-        getChartCanvas={() => chartRef.current?.getCanvas() || null}
         onOpenProfile={() => {
           setIsPdfModalOpen(false);
           setIsProfileModalOpen(true);

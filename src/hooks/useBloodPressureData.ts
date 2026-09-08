@@ -174,13 +174,13 @@ export function useBloodPressureData() {
         minReading = r;
       }
 
-      // Morning vs Evening
+      // Morning vs Evening/Afternoon
       if (r.timeOfDay === 'morning') {
         morningSet.systolic += r.systolic;
         morningSet.diastolic += r.diastolic;
         morningSet.pulse += r.pulse;
         morningSet.count += 1;
-      } else if (r.timeOfDay === 'evening' || r.timeOfDay === 'night') {
+      } else {
         eveningSet.systolic += r.systolic;
         eveningSet.diastolic += r.diastolic;
         eveningSet.pulse += r.pulse;

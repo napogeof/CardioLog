@@ -18,7 +18,6 @@ interface PdfReportModalProps {
   readings: BloodPressureReading[];
   patientProfile: PatientProfile;
   statistics: BPStatistics;
-  getChartCanvas: () => HTMLCanvasElement | null;
   onOpenProfile: () => void;
 }
 
@@ -28,7 +27,6 @@ export function PdfReportModal({
   readings,
   patientProfile,
   statistics,
-  getChartCanvas,
   onOpenProfile
 }: PdfReportModalProps) {
   const [selectedRange, setSelectedRange] = useState<FilterRange>('30d');
@@ -63,12 +61,10 @@ export function PdfReportModal({
   const handleDownload = async () => {
     setIsGenerating(true);
     try {
-      const canvas = getChartCanvas();
       await generateDoctorReportPdf({
         readings: exportReadings,
         patientProfile,
         statistics,
-        chartCanvas: canvas,
         periodLabel: rangeLabels[selectedRange]
       });
       setIsDone(true);
