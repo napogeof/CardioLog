@@ -362,11 +362,11 @@ export async function generateDoctorReportPdf({
   doc.setTextColor(15, 23, 42);
   doc.text('INFORME CLÍNICO DE PRESIÓN ARTERIAL', margin, currentY + 4);
 
-  // Subtítulo
+  // Subtítulo con autoría
   doc.setFont('helvetica', 'normal');
   doc.setFontSize(9);
   doc.setTextColor(100, 116, 139);
-  doc.text('CardioLog • Monitoreo Ambulatorio y Frecuencia Cardíaca', margin, currentY + 9);
+  doc.text('CardioLog • Desarrollado por Daniel Arráiz • Monitoreo Clínico Ambulatorio', margin, currentY + 9);
 
   // Fecha de emisión
   const now = new Date();
@@ -662,7 +662,7 @@ export async function generateDoctorReportPdf({
     doc.setFontSize(7);
     doc.setTextColor(148, 163, 184);
     doc.text(
-      'Aviso: Este informe es un registro de automonitoreo para soporte en la toma de decisiones clínicas y no reemplaza el diagnóstico presencial.',
+      'CardioLog (por Daniel Arráiz) • Registro de automonitoreo para soporte en la toma de decisiones clínicas y no reemplaza el diagnóstico presencial.',
       margin,
       pageHeight - 5
     );

@@ -283,6 +283,9 @@ export function App() {
           <span>•</span>
           <span>PWA Instalable</span>
         </div>
+        <p className="text-xs text-slate-400 font-medium">
+          CardioLog • Desarrollado por <strong className="text-slate-200">Daniel Arráiz</strong>
+        </p>
         <p className="text-[11px] text-slate-600 max-w-2xl mx-auto">
           CardioLog es una herramienta de registro personal y apoyo clínico. No sustituye la consulta médica profesional, el diagnóstico ni la prescripción facultativa. En caso de cifras críticas (&gt;180/120 mmHg) o síntomas agudos, acuda a urgencias.
         </p>
