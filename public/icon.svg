@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7" />
+      <stop offset="50%" stop-color="#0369a1" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+    <linearGradient id="heartGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f43f5e" />
+      <stop offset="100%" stop-color="#e11d48" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#f43f5e" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  
+  <!-- Rounded App Background -->
+  <rect width="512" height="512" rx="115" fill="url(#bgGrad)"/>
+  
+  <!-- Subtle circular pulse rings -->
+  <circle cx="256" cy="256" r="190" fill="none" stroke="#38bdf8" stroke-width="3" stroke-opacity="0.2" stroke-dasharray="10 15"/>
+  <circle cx="256" cy="256" r="225" fill="none" stroke="#38bdf8" stroke-width="2" stroke-opacity="0.1"/>
+
+  <!-- Medical Heart Shape -->
+  <path d="M256 420 C 240 405, 120 310, 100 220 C 85 150, 135 105, 195 105 C 228 105, 248 122, 256 135 C 264 122, 284 105, 317 105 C 377 105, 427 150, 412 220 C 392 310, 272 405, 256 420 Z" 
+        fill="url(#heartGrad)" filter="url(#glow)"/>
+
+  <!-- ECG / Pulse Line traversing the heart -->
+  <path d="M70 260 L 175 260 L 205 210 L 235 315 L 265 170 L 295 330 L 325 240 L 350 260 L 442 260" 
+        fill="none" stroke="#ffffff" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
